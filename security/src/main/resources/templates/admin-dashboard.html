@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Espace Admin</title>
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #f3f0ff; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        .card { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); text-align: center; width: 400px; border-top: 5px solid #4a148c; }
+        h2 { color: #4a148c; }
+        .status { color: #2e7d32; font-weight: bold; background: #e8f5e9; padding: 5px 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h2>Espace Administrateur</h2>
+    <p>Statut : <span class="status">Accès Autorisé</span></p>
+    <p>Cette zone est réservée à la gestion du système.</p>
+
+    <a th:href="@{/}" style="display: block; margin-top: 15px; color: #4a148c; text-decoration: none; font-weight: bold;">🏠 Retour à l'accueil</a>
+
+    <form th:action="@{/logout}" method="post" style="margin-top: 25px;">
+        <button type="submit" style="background-color: #4a148c; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; width: 100%;">Se déconnecter</button>
+    </form>
+</div>
+</body>
+</html>
